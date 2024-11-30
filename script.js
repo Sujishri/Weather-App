@@ -19,6 +19,10 @@ async function checkWheather(city) {
       Math.round(data.main.temp) + "&deg;C";
     document.querySelector(".humidity").innerHTML = data.wind.speed + " km/h";
 
+     document.querySelector(".wind").innerHTML = (data.wind.speed * 3.6).toFixed(1) + " km/h";
+
+
+
     console.log(data.weather[0].main);
     if (data.weather[0].main == "Clouds") {
       weatherIcon.src = "img/clouds.png";
